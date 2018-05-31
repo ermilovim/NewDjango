@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My Web Pages will be listed here
-    'MyWebPage1'
+    'MyWebPage1',
+    'MyWebPage2',
 ]
 
 MIDDLEWARE = [
