@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
+{% load static %}
 <head>
 	<title>Портфолио</title>
     <!-- Meta -->
@@ -25,7 +26,7 @@
 <body>
 	<header class="header">
         <div class="container">                       
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Ivan Ermilov" />
+            <img class="profile-image img-responsive pull-left" src={% static "mywebpage1/profile.png" %}/>
             <div class="profile-content pull-left">
                 <h1 class="name">Иван Ермилов</h1>
                 <h2 class="desc">Слушатель</h2>   
@@ -46,7 +47,7 @@
                             <p>Увлекаюсь игрой в футбол, в который играю с 7 лет. До поступления играл в любительских полупрофессиональных лигах, но участиями в матчах не отметился. Сейчас выступаю в любительских лигах на позиции
                             <a href="#" onmouseover="showLinkImage('me')" onmouseout="hideLinkImage('me')">вратаря.</a>
       						<div id="me" style="display: none; position: absolute;">
-       						<img src="assets/images/football.png" alt="me" /></div> В свободное от учебы время увлекаюсь программированием. В период обучения в лингвистическом лицее(с 8 по 11 класс) изучал китайский язык, ездил на стажировку в Шанхай. С 2014 года отец двух дочек.</p>
+       						<img src={% static "mywebpage1/football.png" %} alt="me" /></div> В свободное от учебы время увлекаюсь программированием. В период обучения в лингвистическом лицее(с 8 по 11 класс) изучал китайский язык, ездил на стажировку в Шанхай. С 2014 года отец двух дочек.</p>
                          
                         </div><!--content-->
                     </div><!--section-inner-->                 
@@ -62,7 +63,7 @@
                                 <p class="summary">Действительно ли Биткоин анонимен?</p>
                                 <div class="featured-image">
                                     <a href="https://ru.wikipedia.org/wiki/Криптовалюта" target="_blank">
-                                    <img class="img-responsive project-image" src="assets/images/bitcoin.jpg" alt="project name" />
+                                    <img class="img-responsive project-image" src={% static "mywebpage1/bitcoin.jpg" %} alt="project name" />
                                     </a>
                                 </div>
                                     
@@ -74,7 +75,7 @@
                             <hr class="divider" />
                             <div class="item row">
                             	 <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/ermilovim/facebook" target="_blank">
-                                <img class="img-responsive project-image" src="assets/images/facebook.jpg" alt="project name" />
+                                <img class="img-responsive project-image" src={% static "mywebpage1/facebook.jpg" %} alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                     <h3 class="title"><a href="https://github.com/ermilovim/facebook" target="_blank">Facebook</a></h3>
@@ -84,7 +85,7 @@
                             <hr class="divider" />
                             <div class="item row">
                             	 <a class="col-md-4 col-sm-4 col-xs-12" href="assets/LRS.pdf" target="_blank">
-                                <img class="img-responsive project-image" src="assets/images/LRS.png" alt="project name" />
+                                <img class="img-responsive project-image" src={% static "mywebpage1/LRS.png" %} alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                     <h3 class="title"><a href="assets/LRS.pdf" target="_blank">Произведение линейных рекуррентных последовательностей.</a></h3>
@@ -94,7 +95,7 @@
                             <hr class="divider" />
 							<div class="item row">
                                 <a class="col-md-4 col-sm-4 col-xs-12" href="assets/Алгоритм Прюфера.pdf" target="_blank">
-                                <img class="img-responsive project-image" src="assets/images/prufer.png" alt="project name" />
+                                <img class="img-responsive project-image" src={% static "mywebpage1/prufer.png" %} alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                     <h3 class="title"><a href="assets/Алгоритм Прюфера.pdf" target="_blank">Алгоритм Прюфера</a></h3>
@@ -120,7 +121,7 @@
                 			</div>
                 			<div class="item">
                 				<h3 class="title">Семья</h3>
-                				<img src="assets/images/children.jpg" alt="children">
+                				<img src={% static "mywebpage1/children.jpg" %} alt="children">
                 				<p class="summary">Слева-Евгения, справа-Ксения. Родились 05.10.2014. Сейчас уже ходим в садик.</p>
                 			</div>
                 		</div>
