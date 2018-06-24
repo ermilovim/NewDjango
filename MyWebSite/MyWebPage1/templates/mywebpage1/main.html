@@ -20,7 +20,7 @@
     
     
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
     <script src="assets/js/main.js"></script>
 </head>
 <body>
@@ -84,21 +84,21 @@
                             </div>
                             <hr class="divider" />
                             <div class="item row">
-                            	 <a class="col-md-4 col-sm-4 col-xs-12" href="assets/LRS.pdf" target="_blank">
+                            	 <a class="col-md-4 col-sm-4 col-xs-12" href={% static "mywebpage1/LRS.pdf" %} target="_blank">
                                 <img class="img-responsive project-image" src={% static "mywebpage1/LRS.png" %} alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title"><a href="assets/LRS.pdf" target="_blank">Произведение линейных рекуррентных последовательностей.</a></h3>
+                                    <h3 class="title"><a href={% static "mywebpage1/LRS.pdf" %} target="_blank">Произведение линейных рекуррентных последовательностей.</a></h3>
                                     <p>На втором и третьем курсе я изучал теорию линейных рекуррент. Из этой большой области я выбрал более узкое направление, а именно - произведение линейных рекуррент. В 1973 году В.И.Нечаев сформулировал гипотезу о ранге произведения линейных рекуррентных последовательностей. В 2005 году Р.В. Богонатов нашел пример, опровергающий данную гипотезу. В своей работе я нашел еще плеяду новых примеров, оровергающих гипотезу.</p>                                   
                                 </div>                          
                             </div>
                             <hr class="divider" />
 							<div class="item row">
-                                <a class="col-md-4 col-sm-4 col-xs-12" href="assets/Алгоритм Прюфера.pdf" target="_blank">
+                                <a class="col-md-4 col-sm-4 col-xs-12" href={% static "mywebpage1/Алгоритм Прюфера.pdf" %} target="_blank">
                                 <img class="img-responsive project-image" src={% static "mywebpage1/prufer.png" %} alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title"><a href="assets/Алгоритм Прюфера.pdf" target="_blank">Алгоритм Прюфера</a></h3>
+                                    <h3 class="title"><a href={% static "mywebpage1/Алгоритм Прюфера.pdf" %} target="_blank">Алгоритм Прюфера</a></h3>
                                     <p>Код Прюфера был использован Хайнцем Прюфером при доказательстве формулы Кэли в 1918 году. Алгоритм построения кода Прюфера называют Алгоритмом Прюфера. В учебниках доказательство соответствия деревьев и выборок доказывается не совсем корректно. В своей <a href="assets/Алгоритм Прюфера.pdf">работе</a> я написал полное доказательство корректности работы алгоритма.</p>
                                 </div><!--desc-->                          
                             </div><!--item-->
