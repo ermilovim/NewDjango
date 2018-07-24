@@ -1,9 +1,14 @@
+import browsercookie
 import facebook
 import requests
 import sqlite3
 import os
 import sys
 
+import time
+
+sess = requests.Session()
+sess.cookies = browsercookie.chrome()
 
 def check_exist_user_by_id():
     con = sqlite3.connect('users.db')
@@ -33,7 +38,9 @@ def check_exist_user_by_id():
             except Exception as e:
                 existence = False
         else:
-            resp = requests.get('https://www.facebook.com/{}'.format(id))
+            resp = sess.get('https://www.facebook.com/{}'.format(id))
+            open(f'{time.time()}.html', 'w', encoding='UTF-8').write(resp.text)
+            if ('Sorry, this content' in resp.text) or ('not found' in resp.text):
             if 'не найдена' in resp.text:
                 existence = False
             else:

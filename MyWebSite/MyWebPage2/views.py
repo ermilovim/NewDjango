@@ -4,9 +4,9 @@ import sqlite3
 
 def index(request):
     # логика работы с данными
-    con = sqlite3.connect('user.db')
+    con = sqlite3.connect('users.db')
     cur = con.cursor()
-    data = cur.execute('SELECT * FROM user')
+    data = cur.execute('SELECT * FROM users')
     # упаковываешь контекст
     context = {'table_in_html': data}
     return render_to_response("mywebpage2/main.html", context)
