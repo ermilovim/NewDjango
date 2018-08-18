@@ -1,4 +1,4 @@
-import browsercookie
+import browser_cookie3
 import facebook
 import requests
 import sqlite3
@@ -7,8 +7,9 @@ import sys
 
 import time
 
+
 sess = requests.Session()
-sess.cookies = browsercookie.chrome()
+sess.cookies = browser_cookie3.chrome()
 
 def check_exist_user_by_id():
     con = sqlite3.connect('users.db')
@@ -24,7 +25,7 @@ def check_exist_user_by_id():
     with open("ids", 'w') as f:
         f.write('')
 
-    ids = cur.execute('SELECT id FROM users where existence is null').fetchall()
+    ids = cur.execute('SELECT id FROM users').fetchall()
 
     graph = facebook.GraphAPI('1938851329475559|9N7KF0F4LokFujG_oTibHwz3YwM')
 
@@ -40,8 +41,7 @@ def check_exist_user_by_id():
         else:
             resp = sess.get('https://www.facebook.com/{}'.format(id))
             open(f'{time.time()}.html', 'w', encoding='UTF-8').write(resp.text)
-            if ('Sorry, this content' in resp.text) or ('not found' in resp.text):
-            if 'не найдена' in resp.text:
+            if ('Sorry, this content' in resp.text) or ('not found' in resp.text) or ("не найдена" in resp.text):
                 existence = False
             else:
                 existence = True
