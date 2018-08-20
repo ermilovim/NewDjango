@@ -5,8 +5,13 @@
     <title>Table</title>
 </head>
 <body>
-    <p>Введите новый идентификатор <input name="newid" required></p>
-    <p><input type="submit" value="Добавить"></p>
+   <form action="/add_new_id/" method="post">
+        <label for="add_new_id">Введите идентификатор: </label>
+        <input id="add_new_id" type="text" name="add_new_id" maxlength="100">
+        <input type="submit" value="Добавить">
+       {% csrf_token %}
+    </form>
+
 <table>
     {% for row in table_in_html %}
     <tr>
