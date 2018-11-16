@@ -16,9 +16,14 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('MyWebPage1.urls', namespace='mywebpage1')),
-    url(r'^table/$', include('MyWebPage2.urls', namespace='mywebpage2')),
-    url(r'^add_new_id/$', include('MyWebPage2.urls', namespace='addnewid')),
+    url(r'^workspace/', include('MyWebPage2.urls', namespace='mywebpage2')),
+    url(r'^upload/', include('Upload.urls', namespace='upload')),
+    url(r'^viewbase/', include('ViewBase.urls', namespace='viewbase')),
+    url(r'^viewgraph/', include('ViewGraph.urls', namespace='viewgraph')),
+    url(r'^addnewid/', include('Upload.urls', namespace='addnewid')),
 ]

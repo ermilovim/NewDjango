@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     # My Web Pages will be listed here
     'MyWebPage1',
     'MyWebPage2',
+    'Upload',
+    'ViewBase',
+    'ViewGraph',
 ]
 
 MIDDLEWARE = [
