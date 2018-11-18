@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Upload',
     'ViewBase',
     'ViewGraph',
+
 ]
 
 MIDDLEWARE = [

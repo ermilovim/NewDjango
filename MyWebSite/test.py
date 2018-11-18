@@ -41,7 +41,7 @@ def check_exist_user_by_id():
                 existence = False
         else:
             resp = sess.get('https://www.facebook.com/{}'.format(id))
-            open(f'{time.time()}.html', 'w', encoding='UTF-8').write(resp.text)
+            # open(f'{time.time()}.html', 'w', encoding='UTF-8').write(resp.text)
             if ('Sorry, this content' in resp.text) or ('not found' in resp.text) or ("не найдена" in resp.text):
                 existence = False
             else:
