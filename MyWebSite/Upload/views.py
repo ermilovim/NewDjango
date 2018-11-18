@@ -17,10 +17,11 @@ def index(request):
 
 def addnewid(request):
     print("ADDNEWID РАБОТАЕТ!")
-    f = open('ids.txt', 'w')
+    f = open('ids.txt', 'a')
     if request.method == "POST":
         message = request.POST["addnewid"]
         f.write(message)
+    f.write("\n")
     f.close()
     return render(request, "upload/main.html")
 

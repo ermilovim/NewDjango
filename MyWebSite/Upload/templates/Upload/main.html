@@ -60,8 +60,14 @@
                                 <input id="addnewid" type="text" name="addnewid" maxlength="100">
                                 <button type="submit" value="Добавить", class="btn btn-primary">Добавить</button>
                             </form>
+                            <form>
+                              <div class="form-group">
+                                <label for="exampleFormControlFile1">Выберите файл .txt с идентификаторами(каждый id на новой строчке)</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                              </div>
+                            </form>
                             <a href="/upload/check_exist_user_by_id">
-                                <button type = "submit" value = "Run the Program!!!", class="btn">Запустить программу</button>
+                                <button type = "submit" value = "Run the Program!!!", class="btn btn-success">Запустить программу</button>
                             </a>
                         </div><!--content-->
                     </div><!--section-inner-->
@@ -75,10 +81,14 @@
                         <h2 class="heading">Menu</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><a href="/workspace",  class="btn">Main</a></li>
-                                <li><a href="/upload",     class="btn">Upload</a></li>
-                                <li><a href="/viewbase",   class="btn">ViewBase</a></li>
-                                <li><a href="/viewgraph",  class="btn">ViewGraph</a></li>
+                                <a href="/workspace" class="nav-tabs-dropdown btn btn-block btn-primary">Main</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/upload" class="nav-tabs-dropdown btn btn-block btn-primary">Upload</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/viewbase" class="nav-tabs-dropdown btn btn-block btn-primary">View Base</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/viewgraph" class="nav-tabs-dropdown btn btn-block btn-primary">View Graph</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
                             </ul>
                         </div><!--content-->
                     </div><!--section-inner-->

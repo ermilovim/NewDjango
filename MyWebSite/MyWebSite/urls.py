@@ -26,5 +26,4 @@ urlpatterns = [
     url(r'^viewbase/', include('ViewBase.urls', namespace='viewbase')),
     url(r'^viewgraph/', include('ViewGraph.urls', namespace='viewgraph')),
     url(r'^addnewid/', include('Upload.urls', namespace='addnewid')),
-    # url(r'^check_exist_user_by_id/', include('Upload.urls', namespace='check_exist_user_by_id')),
 ]

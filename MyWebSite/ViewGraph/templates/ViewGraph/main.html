@@ -52,12 +52,11 @@
     		<div class="primary col-md-8 col-sm-12 col-xs-12"><!--main column-->
 				<section class="about section">
                     <div class="section-inner">
-                        <h2 class="heading">Обо мне</h2>
+                        <h2 class="heading">Построение графа</h2>
                         <div class="content">
-                            <p>Выберите один из пунктов меню справа.</p>
-                            <p>Upload - добавление и проверка новых id в базу</p>
-                            <p>ViewBase - вывод базы идентификаторов на экран</p>
-                            <p>ViewGraph - вывод графа ip-адресов на экран</p>
+                            <a href="/viewgraph/buildgraph">
+                                <button type = "submit" value = "Build graph!", class="btn btn-primary btn-lg">Построить граф</button>
+                            </a>
                         </div><!--content-->
                     </div><!--section-inner-->
                 </section><!--section-->
@@ -70,10 +69,14 @@
                         <h2 class="heading">Menu</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><a href="/workspace",  class="btn">Main</a></li>
-                                <li><a href="/upload",     class="btn">Upload</a></li>
-                                <li><a href="/viewbase",   class="btn">ViewBase</a></li>
-                                <li><a href="/viewgraph",  class="btn">ViewGraph</a></li>
+                                <a href="/workspace" class="nav-tabs-dropdown btn btn-block btn-primary">Main</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/upload" class="nav-tabs-dropdown btn btn-block btn-primary">Upload</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/viewbase" class="nav-tabs-dropdown btn btn-block btn-primary">View Base</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
+                                <a href="/viewgraph" class="nav-tabs-dropdown btn btn-block btn-primary">View Graph</a>
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal"></ul>
                             </ul>
                         </div><!--content-->
                     </div><!--section-inner-->
